@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Errors and Exceptions</title>
+  </head>
+  <body>
+    <h2>Syntax Errors</h2>
+    <p>
+      Syntax errors, also called parsing errors, occur at compile time in
+      traditional programming languages and at interpret time in JavaScript. For
+      example, the following line causes a syntax error because it is missing a
+      closing parenthesis.
+    </p>
+    <!-- <script type="text/javascript"> -->
+    <!--
+         window.print(;
+         //Here syntax error occurs
+      //-->
+    <!-- </script> -->
+    <h2>Runtime Errors</h2>
+    <p>
+      Runtime errors, also called exceptions, occur during execution (after
+      compilation/interpretation). For example, the following line causes a
+      runtime error because here the syntax is correct, but at runtime, it is
+      trying to call a method that does not exist.
+    </p>
+
+    <!-- <script type = "text/javascript">
+        <!--
+           window.printme();
+        //-->
+    <!-- </script> -->
+
+    <h2>Logical Errors</h2>
+    <p>
+      Logic errors can be the most difficult type of errors to track down. These
+      errors are not the result of a syntax or runtime error. Instead, they
+      occur when you make a mistake in the logic that drives your script and you
+      do not get the result you expected. You cannot catch those errors, because
+      it depends on your business requirement what type of logic you want to put
+      in your program.
+    </p>
+
+    <script>
+      let x = 10;
+      //   if (x > 4) {
+      //     throw "X is greater than 10";
+      //   }
+      try {
+        ac56a1c1;
+      } catch (error) {
+        console.log(error.message);
+      } finally {
+        console.log("Finally runs at the last of try catch");
+      }
+    </script>
+  </body>
+</html>
