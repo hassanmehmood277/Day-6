@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inheritance</title>
+  </head>
+  <body>
+    <script>
+      class Employee {
+        constructor(fname, lname, gender) {
+          this.fname = fname;
+          this.lname = lname;
+          this.fullname = function () {
+            return this.fname + " " + this.lname;
+          };
+          this.gender = gender;
+        }
+        show() {
+          console.log(this.fname);
+          return this.fname;
+        }
+      }
+
+      class Manager extends Employee {
+        constructor(mfname, mlname, mgender) {
+          super();
+          this.mfname = mfname;
+          this.mlname = mlname;
+          this.mgender = mgender;
+        }
+        fnames() {
+          document.write(`<h2> Displaying Name using inheritance</h2>
+                <p>The first name of the Employee is ${emp.show()} and the first name of the manager is ${
+            this.mfname
+          }</p>`);
+        }
+      }
+      let emp = new Employee("Hassan", "Mehmood", "Male");
+      let mng = new Manager("Zaviyaar", "Adnan", "Male");
+      //   emp.show();
+      mng.fnames();
+
+      class StaticClass {
+        constructor(/*Some params*/) {
+          /*Block of Code*/
+        }
+        static anyfunc() {
+          document.write(
+            `<h2>This static method does not need any object to be called... Its is called by following step</h2>`
+          );
+        }
+      }
+      let st = new StaticClass();
+      StaticClass.anyfunc();
+    </script>
+  </body>
+</html>

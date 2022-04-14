@@ -34,7 +34,7 @@
         //-->
     <!-- </script> -->
 
-    <h2>Logical Errors</h2>
+    <h2 onclick="myfunc()">Logical Errors</h2>
     <p>
       Logic errors can be the most difficult type of errors to track down. These
       errors are not the result of a syntax or runtime error. Instead, they
@@ -56,6 +56,13 @@
       } finally {
         console.log("Finally runs at the last of try catch");
       }
+      // First error handling technique in js and most effective
+      window.onerror = function (msg, url, linenum) {
+        alert("An Error occured");
+        alert(msg);
+        alert(url);
+        alert(linenum);
+      };
     </script>
   </body>
 </html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ES6</title>
+  </head>
+  <body>
+    <h2>Some new features in ES6 are given below:</h2>
+    <ol>
+      <li>The List keyword for variable declaration.</li>
+      <li>The const keyword for variable declaration.</li>
+      <li>Arrow Functions</li>
+      <li>For loops</li>
+      <li>Array Destruction Assignment</li>
+    </ol>
+    <script>
+      document.write(`<h2>Array destructuring assignment</h2>`);
+      let fruits = ["Apple", "Banana"];
+      let [a, b] = fruits; // Array destructuring assignment
+      console.log(a);
+
+      document.write(`<h2>Arrow functions</h2>`);
+      let demo = (a, b) => a + a * b - a + b;
+      document.write(demo(3, 6) + `<br>`);
+
+      let obj = { firstname: "Hassan", lastname: "Mehmood" }; // Object destructuring assignment
+      let { firstname, lastname } = obj;
+      document.write(firstname);
+    </script>
+  </body>
+</html>
